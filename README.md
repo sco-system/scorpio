@@ -1,2 +1,2 @@
 # scorpio
-a lightweight modular framework for Java
+a lightweight modular framework
