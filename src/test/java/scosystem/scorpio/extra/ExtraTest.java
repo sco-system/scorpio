@@ -1,8 +1,6 @@
 package scosystem.scorpio.extra;
 
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -11,18 +9,10 @@ import org.junit.Test;
  */
 public class ExtraTest {
 
-    @Before
-    public void before() throws Exception {
-    }
-
-    @After
-    public void after() throws Exception {
-    }
-
     @Test
-    public void testError() throws Exception {
+    public void testStepBizExample() throws Exception {
 
-        StepExample step = new StepExample();
+        StepBizExample step = new StepBizExample();
         step.go();
 
         Assert.assertTrue(true);

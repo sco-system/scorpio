@@ -1,20 +1,20 @@
 package scosystem.scorpio.extra;
 
-import scosystem.scorpio.extra.annotation.ExtraFlag;
+import scosystem.scorpio.extra.annotation.ExtraMethodFlag;
 
 /**
  * @author chinawym@gmail.com
  * @since 2015-03-24
  */
-public class StepExample {
+public class StepBizExample {
 
     public void step1() {
         System.out.println("step1");
     }
 
-    @ExtraFlag
-    public void step2(int stepNumber) {
-        System.out.println("step" + stepNumber);
+    @ExtraMethodFlag
+    public void step2(int stepNum) {
+        System.out.println("step" + stepNum);
     }
 
     public void step3() {
