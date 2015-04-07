@@ -1,4 +1,4 @@
-package scosystem.scorpio.extra.annotation;
+package scosystem.scorpio.block.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -13,5 +13,5 @@ import java.lang.annotation.ElementType;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface ExtraMethodFlag {
+public @interface BlockMethodImpl {
 }

@@ -1,4 +1,4 @@
-package scosystem.scorpio.extra.loader;
+package scosystem.scorpio.block.loader;
 
 import java.util.Set;
 
@@ -6,7 +6,7 @@ import java.util.Set;
  * @author chinawym@gmail.com
  * @since 2015-03-24
  */
-public interface IExtraLoader {
+public interface IBlockLoader {
 
     public Set<String> getExtraMethodImpls();
 }
