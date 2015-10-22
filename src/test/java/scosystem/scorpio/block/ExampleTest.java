@@ -7,13 +7,13 @@ import org.junit.Test;
  * @author chinawym@gmail.com
  * @since 2015-03-24
  */
-public class BlockTest {
+public class ExampleTest {
 
     @Test
-    public void testStepBizExample() throws Exception {
+    public void testExample() throws Exception {
 
-        BizExample step = new BizExample();
-        step.go();
+        Example example = new Example();
+        example.go();
 
         Assert.assertTrue(true);
     }
