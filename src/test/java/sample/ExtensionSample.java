@@ -1,4 +1,4 @@
-package scorpio.extension.test;
+package sample;
 
 import scorpio.extension.entity.annotation.Extension;
 import java.math.BigDecimal;
@@ -8,7 +8,7 @@ import java.math.RoundingMode;
  * @author xuanyin
  * @since 2015-10-28
  */
-public final class ExtDemo {
+public final class ExtensionSample {
     /**
      * 美元换人民币
      *

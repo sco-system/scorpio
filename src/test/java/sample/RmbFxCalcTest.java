@@ -1,4 +1,4 @@
-package scorpio.extension.test;
+package sample;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  */
 public class RmbFxCalcTest {
     @Test
-    public void testExample() throws Exception {
+    public void test() throws Exception {
         RmbFxCalc rmbFxCalc = new RmbFxCalc();
         BigDecimal result = rmbFxCalc.run(new BigDecimal(100));
         if (null != result) {

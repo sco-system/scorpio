@@ -1,6 +1,7 @@
-package scorpio.extension.test;
+package sample;
 
 import scorpio.extension.entity.annotation.SPI;
+import scorpio.extension.service.ExtensionService;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -11,6 +12,8 @@ import java.math.RoundingMode;
  * @since 2015-03-24
  */
 public final class RmbFxCalc {
+    private static final ExtensionService<RmbFxCalc> extensionService = new ExtensionService<RmbFxCalc>(RmbFxCalc.class);
+
     /**
      * @param input 输入元
      * @return 兑换元
