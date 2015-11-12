@@ -1,7 +1,6 @@
 package sample;
 
 import scorpio.extension.entity.annotation.SPI;
-import scorpio.extension.service.ExtensionService;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -12,34 +11,28 @@ import java.math.RoundingMode;
  * @since 2015-03-24
  */
 public final class RmbFxCalc {
-    private static final ExtensionService<RmbFxCalc> extensionService = new ExtensionService<RmbFxCalc>(RmbFxCalc.class);
-
     /**
-     * @param input 输入元
-     * @return 兑换元
+     * @param yuan 输入元
      */
-    public BigDecimal run(final BigDecimal input) {
-        BigDecimal result = null;
-
-        if (null != input) {
-            result = compute(input.longValue());
+    public void run(final BigDecimal yuan) {
+        if (null != yuan) {
+            compute(yuan);
         }
-
-        return result;
     }
 
     /**
      * 人民币换美元
      *
-     * @param cent 分
-     * @return 元
+     * @param yuan 人民币元
+     * @return 兑后美元
      */
     @SPI
-    private BigDecimal compute(final long cent) {
+    private BigDecimal compute(final BigDecimal yuan) {
         BigDecimal result = null;
 
-        if (0L < cent) {
-            result = new BigDecimal(cent * 0.157).setScale(2, RoundingMode.HALF_UP);
+        if (null != yuan) {
+            result = new BigDecimal(yuan.longValue() * 0.157).setScale(2, RoundingMode.HALF_UP);
+            System.out.println(String.format("人民币 %s 元兑换 %s 美元", yuan, result));
         }
 
         return result;

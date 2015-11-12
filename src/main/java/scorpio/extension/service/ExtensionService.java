@@ -11,21 +11,21 @@ import java.util.concurrent.ConcurrentMap;
  * @author xuanyin
  * @since 2015-10-28
  */
-public final class ExtensionService<T> {
-    private static final String EXTENSION_FILE_PATH = "META-INF/extension.properties";
-    private static final ConcurrentMap<String, String> EXTENSION_FILE_DETAIL = new ConcurrentHashMap<String, String>();
-    private Class<?> cls;
+public final class ExtensionService<S> {
+    private static final String FILE_PATH = "META-INF/extension.properties";
+    private static final ConcurrentMap<String, String> FILE_DETAIL = new ConcurrentHashMap<String, String>();
+    private Class<S> extension;
 
     /**
      *
      */
-    public ExtensionService(Class<T> cls) {
-        this.cls = cls;
+    public ExtensionService(Class<S> extension) {
+        this.extension = extension;
 
         initProperties();
     }
 
-    public void getInstance(String name) {
+    public static void getInstance(String name) {
 
     }
 
@@ -37,9 +37,9 @@ public final class ExtensionService<T> {
             Enumeration<URL> urls;
             ClassLoader classLoader = thisClassLoader();
             if (null != classLoader) {
-                urls = classLoader.getResources(EXTENSION_FILE_PATH);
+                urls = classLoader.getResources(FILE_PATH);
             } else {
-                urls = ClassLoader.getSystemResources(EXTENSION_FILE_PATH);
+                urls = ClassLoader.getSystemResources(FILE_PATH);
             }
             if (null != urls) {
                 URL url = urls.nextElement();
@@ -50,7 +50,7 @@ public final class ExtensionService<T> {
                         if (line.contains("=")) {
                             String[] values = "=".split(line);
                             if (2 == values.length) {
-                                EXTENSION_FILE_DETAIL.putIfAbsent(values[0], values[1]);
+                                FILE_DETAIL.putIfAbsent(values[0], values[1]);
                             }
                         }
                     }
@@ -60,7 +60,7 @@ public final class ExtensionService<T> {
             e.printStackTrace();
         }
 
-        System.out.println(EXTENSION_FILE_DETAIL.toString());
+        System.out.println(FILE_DETAIL.toString());
     }
 
     /**

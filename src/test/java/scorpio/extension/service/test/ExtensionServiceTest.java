@@ -1,4 +1,4 @@
-package scorpio.extension.test;
+package scorpio.extension.service.test;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,8 +13,7 @@ public class ExtensionServiceTest {
     public void testLoadFile() throws Exception {
         boolean result = false;
 
-        ExtensionService extensionService = new ExtensionService();
-        extensionService.loadFile();
+        ExtensionService extensionService = ExtensionService;
 
         result = true;
 

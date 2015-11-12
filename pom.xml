@@ -69,7 +69,7 @@
         <dependency>
             <groupId>me.yumin</groupId>
             <artifactId>java-common</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
         <!-- ##### compile ##### -->
         <dependency>

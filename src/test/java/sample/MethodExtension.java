@@ -8,7 +8,7 @@ import java.math.RoundingMode;
  * @author xuanyin
  * @since 2015-10-28
  */
-public final class ExtensionSample {
+public final class MethodExtension {
     /**
      * 美元换人民币
      *
